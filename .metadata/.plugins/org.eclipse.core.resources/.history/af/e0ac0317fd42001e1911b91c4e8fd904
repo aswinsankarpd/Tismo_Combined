@@ -1,0 +1,16 @@
+/*
+ * uart_handler.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef UART_UART_HANDLER_H_
+#define UART_UART_HANDLER_H_
+
+
+#include "main.h"
+#include "usart.h"
+
+void Rx_UART_Intrpt();
+#endif /* UART_UART_HANDLER_H_ */

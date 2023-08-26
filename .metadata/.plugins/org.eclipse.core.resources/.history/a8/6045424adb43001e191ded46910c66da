@@ -1,0 +1,17 @@
+/*
+ * cbuff_main.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+#include "cbuff_main.h"
+
+static Circular_Buffer cb;
+
+void cbuff_main(int param){
+	Circular_Buffer_Init(&cb);
+}
+
+Circular_Buffer* get_cb_addr(){
+	return cb
+}

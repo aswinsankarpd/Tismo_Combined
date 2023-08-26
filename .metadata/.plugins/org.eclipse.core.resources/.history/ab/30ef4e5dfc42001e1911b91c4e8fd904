@@ -1,0 +1,10 @@
+/*
+ * addtobuffer.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+static int Command_Reception_idx = 0;
+char Rx_data1[10];
+char Rx_data2[10];

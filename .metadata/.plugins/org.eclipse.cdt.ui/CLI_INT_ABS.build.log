@@ -1,0 +1,17 @@
+09:53:17 **** Build of configuration Debug for project CLI_INT_ABS ****
+make -j4 all 
+arm-none-eabi-gcc "../Middleware/addtobuffer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/CLI_INT_ABS/Application" -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/CLI_INT_ABS/Middleware" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middleware/addtobuffer.d" -MT"Middleware/addtobuffer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middleware/addtobuffer.o"
+arm-none-eabi-gcc -o "CLI_INT_ABS.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Aswin Sankar\STM32CubeIDE\workspace_1.13.1\Abstracted\CLI_INT_ABS\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CLI_INT_ABS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CLI_INT_ABS.elf
+ 
+arm-none-eabi-size   CLI_INT_ABS.elf 
+arm-none-eabi-objdump -h -S  CLI_INT_ABS.elf  > "CLI_INT_ABS.list"
+   text	   data	    bss	    dec	    hex	filename
+  15892	    136	   2072	  18100	   46b4	CLI_INT_ABS.elf
+Finished building: default.size.stdout
+ 
+Finished building: CLI_INT_ABS.list
+ 
+
+09:53:18 Build Finished. 0 errors, 0 warnings. (took 1s.236ms)
+

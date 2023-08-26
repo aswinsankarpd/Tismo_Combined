@@ -1,0 +1,14 @@
+/*
+ * led_control.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "led_control.h"
+void LED_ON(int value){
+
+	if (value == 1){
+
+	}
+}

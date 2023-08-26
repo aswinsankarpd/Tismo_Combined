@@ -1,0 +1,13 @@
+/*
+ * getSECCOUNT.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "getSECCOUNT.h"
+
+int getSECCOUNT(){
+
+}

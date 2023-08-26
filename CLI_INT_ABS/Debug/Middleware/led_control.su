@@ -1,0 +1,2 @@
+../Middleware/led_control.c:4:6:LED1_ON	8	static
+../Middleware/led_control.c:8:6:LED1_OFF	8	static

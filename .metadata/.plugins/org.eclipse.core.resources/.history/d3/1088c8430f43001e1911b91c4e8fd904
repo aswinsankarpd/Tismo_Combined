@@ -1,0 +1,18 @@
+/*
+ * CommandLineInterface.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "CommandLineInterface.h"
+
+char Temp_Rx_String[1];
+
+void CommandLineInterface(){
+	Rx_UART_Intrpt(Temp_Rx_String);
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart1){
+	addtobuffer(&Temp_Rx_String[0]);
+}

@@ -1,0 +1,34 @@
+/*
+ * cbuf_Enqueue.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "cbuff_Enqueue.h"
+static uint8_t buffer_index=0;
+
+void cbuff_Enqueue(char* pData){
+
+	if (strcmp(pData,"d") == 0){
+		cbuff_Dequeue();
+	}
+
+	uint8_t SIZE = get_SIZE();
+	uint8_t *head = get_head();
+	uint8_t *tail = get_tail();
+
+	tail = tail + buffer_index;
+
+	if (SIZE == buffer_index){
+		tail = head;
+		*tail = *pData;
+		buffer_index=0;
+	}
+	else{
+		*tail = *pData;
+		buffer_index++;
+	}
+
+	Rx_UART_Intrpt();
+}

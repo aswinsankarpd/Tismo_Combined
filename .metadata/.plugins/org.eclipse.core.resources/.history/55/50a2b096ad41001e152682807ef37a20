@@ -1,0 +1,13 @@
+/*
+ * calculation.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+#include "calculation.h"
+
+void calculation(){
+	adc_val = get_adc_val();
+	float resistance = (adc_val*10000)/(5-adc_val);
+	print_val(resistance);
+}

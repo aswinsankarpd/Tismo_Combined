@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "circular_buffer_init.h": "c",
+        "enqueue.h": "c"
+    }
+}

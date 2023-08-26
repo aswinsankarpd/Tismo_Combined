@@ -1,0 +1,11 @@
+/*
+ * adc_main.c
+ *
+ *  Created on: Aug 26, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+void adc_init(int param){
+
+}

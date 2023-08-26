@@ -1,0 +1,36 @@
+/*
+ * TimerCallback.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+#include "TimerCallback.h"
+
+#define PRIM_COUNT 1
+#define SEC_COUNT 10
+static int primary_Count = 0;
+static int secondary_Count = 0;
+
+void TimerCallback(){
+	primary_Count++;
+
+	if (primary_Count == PRIM_COUNT){
+		primary_Count = 0;
+		SubTimerCallback();
+	}
+
+}
+
+void SubTimerCallback(){
+	int SEC_COUNT=getSECCOUNT();
+	secondary_Count++;
+	if (secondary_Count == SEC_COUNT){
+
+		char message[100];
+		int elapsed_time = PRIM_COUNT*secondary_Count;
+		sprintf(message,"The Time Elapsed is %d.",elapsed_time);
+		HAL_UART_Transmit(&huart1,(uint8_t*)message,strlen(message),HAL_MAX_DELAY);
+		secondary_Count = 0;
+
+	}
+}

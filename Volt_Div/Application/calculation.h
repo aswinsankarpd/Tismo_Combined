@@ -1,0 +1,16 @@
+/*
+ * calculation.h
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CALCULATION_H_
+#define CALCULATION_H_
+
+
+#include "main.h"
+#include "adc_driver.h"
+void calculation();
+
+#endif /* CALCULATION_H_ */

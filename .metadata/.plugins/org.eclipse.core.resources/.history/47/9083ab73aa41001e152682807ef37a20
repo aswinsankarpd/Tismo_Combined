@@ -1,0 +1,11 @@
+/*
+ * adc_driver.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+void adc_init(){
+	HAL_ADC_MspInit()
+}

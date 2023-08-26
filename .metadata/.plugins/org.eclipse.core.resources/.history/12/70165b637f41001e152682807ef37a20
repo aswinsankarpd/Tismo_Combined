@@ -1,0 +1,12 @@
+/*
+ * timer_inits.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "timer_inits.h"
+
+void timer_inits(){
+
+}

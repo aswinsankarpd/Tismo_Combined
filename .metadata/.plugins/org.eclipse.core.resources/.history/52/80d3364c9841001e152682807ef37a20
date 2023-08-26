@@ -1,0 +1,25 @@
+/*
+ * Dequeue.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "Dequeue.h"
+
+static int buffer_size_index = 0;
+
+void Dequeue(){
+
+	static uint8_t *tail = get_tail();
+	static uint8_t SIZE = get_SIZE();
+
+	tail = tail + buffer_size_index;
+	buffer_size_index++;
+
+	HAL_UART_Transmit(&huart1, (uint8_t*)tail, (uint16_t)sizeof(tail),HAL_MAX_DELAY);
+
+	if (buffer_size_index == SIZE)
+		buffer_size_index = 0;
+}

@@ -1,0 +1,15 @@
+/*
+ * fetch_duty.h
+ *
+ *  Created on: Aug 24, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef FETCH_DUTY_H_
+#define FETCH_DUTY_H_
+
+#include "fetch_duty.h"
+#include "main.h"
+int getduty();
+
+#endif /* FETCH_DUTY_H_ */

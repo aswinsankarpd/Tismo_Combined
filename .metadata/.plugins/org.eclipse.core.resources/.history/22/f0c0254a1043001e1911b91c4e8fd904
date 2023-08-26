@@ -1,0 +1,17 @@
+/*
+ * cbuff_Dequeue.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CBUFF_CBUFF_ENQUEUE_H_
+#define CBUFF_CBUFF_ENQUEUE_H_
+
+#include "Circular_Buffer_Init.h"
+#include "Queue_Handler.h"
+#include "main.h"
+
+void Enqueue(char* pData);
+
+#endif /* CBUFF_CBUFF_ENQUEUE_H_ */

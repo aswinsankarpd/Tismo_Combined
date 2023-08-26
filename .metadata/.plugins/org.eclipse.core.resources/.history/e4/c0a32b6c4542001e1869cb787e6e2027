@@ -1,0 +1,15 @@
+/*
+ * pwm_start.h
+ *
+ *  Created on: Aug 24, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef PWM_START_H_
+#define PWM_START_H_
+
+#include "main.h"
+#include "fetchduty.h"
+void pwm_start();
+
+#endif /* PWM_START_H_ */

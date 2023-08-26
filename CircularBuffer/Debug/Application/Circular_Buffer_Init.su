@@ -1,0 +1,4 @@
+../Application/Circular_Buffer_Init.c:14:6:Circular_Buffer_Init	24	dynamic
+../Application/Circular_Buffer_Init.c:20:10:get_head	4	static
+../Application/Circular_Buffer_Init.c:24:10:get_tail	4	static
+../Application/Circular_Buffer_Init.c:28:9:get_SIZE	4	static

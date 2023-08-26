@@ -1,0 +1,4 @@
+../Middleware/fetch_duty.c:15:6:startUartRx	1
+../Middleware/fetch_duty.c:21:6:fetch_duty	2
+../Middleware/fetch_duty.c:32:5:getduty	1
+../Middleware/fetch_duty.c:36:6:uartHandler	1

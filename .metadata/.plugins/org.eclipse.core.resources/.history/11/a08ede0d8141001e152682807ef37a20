@@ -1,0 +1,21 @@
+/*
+ * TimerCallback.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+static int primary_Count = 0;
+
+void TimerCallback(){
+// logic for 10ms
+	primary_Count++;
+	if (primary_Count == 10){
+		primary_Count = 0;
+
+	}
+}
+
+void SubTimerCallback(){
+
+}

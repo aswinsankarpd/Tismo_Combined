@@ -1,0 +1,26 @@
+/*
+ * addtobuffer.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+static int Command_Reception_idx = 0;
+char Rx_Buffer_1[10];
+char Rx_Buffer_2[10];
+
+void addtobuffer(char *Rx_Temp_String){
+	if ((str[0] != '\r') && (str[0] != '\n')) {
+			Rx_data1[Receptionidx] = str[0];
+			Receptionidx++;
+		}
+	else
+		{
+			memcpy(Rx_data2, Rx_data1, strlen(Rx_data1));
+			check_command(Rx_data2);
+			Receptionidx = 0;
+			memset(Rx_data1, 0, sizeof(Rx_data1));
+			memset(Rx_data2, 0, sizeof(Rx_data2));
+		}
+	Receive_Interrupt();
+}

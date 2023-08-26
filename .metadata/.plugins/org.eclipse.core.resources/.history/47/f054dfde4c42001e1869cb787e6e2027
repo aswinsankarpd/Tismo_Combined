@@ -1,0 +1,16 @@
+/*
+ * pwm_start.c
+ *
+ *  Created on: Aug 24, 2023
+ *      Author: Aswin Sankar
+ */
+#include "pwm_start.h"
+static int dutycycle=90;
+
+void pwm_start(){
+	  HAL_TIM_PWM_Init(&htim2);
+	  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+	  dutycycle = getduty();
+	  htim2.Instance->CCR1=dutycycle;
+//	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, dutycycle);
+}

@@ -1,0 +1,25 @@
+/*
+ * cbuff_Dequeue.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CBUFF_CBUFF_ENQUEUE_H_
+#define CBUFF_CBUFF_ENQUEUE_H_
+
+#include "cbuff_init.h"
+#include "uart_handler.h"
+#include "main.h"
+#include "cbuff_main.h"
+#include "cbuff_Dequeue.h"
+
+typedef struct {
+    uint8_t *buffer;
+    uint8_t *head;
+    uint8_t *tail;
+    uint8_t size;
+} CircularBuffer;
+
+void cbuff_Enqueue(char* pData, CircularBuffer* cb);
+#endif /* CBUFF_CBUFF_ENQUEUE_H_ */

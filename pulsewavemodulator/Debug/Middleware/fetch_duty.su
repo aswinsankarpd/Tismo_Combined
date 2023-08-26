@@ -1,0 +1,4 @@
+../Middleware/fetch_duty.c:15:6:startUartRx	8	static
+../Middleware/fetch_duty.c:21:6:fetch_duty	8	static
+../Middleware/fetch_duty.c:32:5:getduty	4	static
+../Middleware/fetch_duty.c:36:6:uartHandler	8	static

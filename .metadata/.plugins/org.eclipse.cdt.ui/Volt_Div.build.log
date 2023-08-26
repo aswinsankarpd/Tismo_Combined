@@ -1,0 +1,10 @@
+09:53:21 **** Incremental Build of configuration Debug for project Volt_Div ****
+make -j4 all 
+arm-none-eabi-size   Volt_Div.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16728	    100	   2116	  18944	   4a00	Volt_Div.elf
+Finished building: default.size.stdout
+ 
+
+09:53:21 Build Finished. 0 errors, 0 warnings. (took 372ms)
+

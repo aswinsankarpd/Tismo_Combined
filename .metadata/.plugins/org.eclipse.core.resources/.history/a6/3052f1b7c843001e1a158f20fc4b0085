@@ -1,0 +1,13 @@
+/*
+ * stimer_main.c
+ *
+ *  Created on: Aug 26, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "stimer_main.h"
+
+void softtimer(){
+	start_timer();
+}

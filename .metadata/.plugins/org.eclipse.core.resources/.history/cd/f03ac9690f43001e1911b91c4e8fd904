@@ -1,0 +1,23 @@
+/*
+ * cbuff_queue_handler.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "cbuff_queue_handler.h"
+static char pData[1];
+
+void cbuff_queue_handler(){
+	pData[1] = NULL;
+	Rx_UART_Intrpt();
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if (pData[0] == 'd'){
+		Dequeue();
+	}
+	else{
+		Enqueue(&pData[0]);
+	}
+}

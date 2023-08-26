@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;CircularBuffer/Application/addtoQueue.c&apos; to &apos;Enqueue.c&apos;" description="Rename resource &apos;addtoQueue.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Application/addtoQueue.c" name="Enqueue.c" stamp="1692703955145" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;CircularBuffer/Application/addtoQueue.h&apos; to &apos;Enqueue.h&apos;" description="Rename resource &apos;addtoQueue.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Application/addtoQueue.h" name="Enqueue.h" stamp="1692703966375" updateReferences="true"/>
+</session>

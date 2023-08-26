@@ -1,0 +1,32 @@
+/*
+ * Circular_Buffer_Init.c
+ *
+ *  Created on: Aug 22, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "Circular_Buffer_Init.h"
+
+static uint8_t SIZE = 5;
+static uint8_t *head;
+static uint8_t *tail;
+
+void Circular_Buffer_Init(){
+	uint8_t c_buffer[SIZE];
+	head = c_buffer;
+	tail = head;
+	HAL_UART_Transmit(&huart1, (uint8_t*)c_buffer, (uint16_t)sizeof(c_Buffer),HAL_MAX_DELAY);
+}
+
+uint8_t* get_head(){
+	return head;
+}
+
+uint8_t* get_tail(){
+	return tail;
+}
+
+uint8_t get_SIZE(){
+	return SIZE;
+}
+

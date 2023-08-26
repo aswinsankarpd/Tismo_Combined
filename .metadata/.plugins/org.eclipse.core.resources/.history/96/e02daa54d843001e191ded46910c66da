@@ -1,0 +1,34 @@
+/*
+ * cbuff_init.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "cbuff_init.h"
+
+typedef struct {
+    uint8_t *buffer;
+    uint8_t *head;
+    uint8_t *tail;
+    uint8_t size;
+} CircularBuffer;
+
+void CircularBuffer_Init(CircularBuffer *cb, uint8_t size) {
+    cb->buffer = (uint8_t *)malloc(size * sizeof(uint8_t));
+    cb->head = cb->buffer;
+    cb->tail = cb->buffer;
+    cb->size = size;
+}
+
+uint8_t* CircularBuffer_GetHead(CircularBuffer *cb) {
+    return cb->head;
+}
+
+uint8_t* CircularBuffer_GetTail(CircularBuffer *cb) {
+    return cb->tail;
+}
+
+uint8_t CircularBuffer_GetSize(CircularBuffer *cb) {
+    return cb->size;
+}

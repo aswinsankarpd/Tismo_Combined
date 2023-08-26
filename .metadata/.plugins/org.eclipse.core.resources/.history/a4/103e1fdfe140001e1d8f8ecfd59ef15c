@@ -1,0 +1,25 @@
+/*
+ * addtoQueue.c
+ *
+ *  Created on: Aug 22, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "Enqueue.h"
+
+void Enqueue(uint8_t *pData){
+//	uint8_t *head = get_head();
+	uint8_t *tail = get_tail();
+
+	tail++;
+	*tail = *pData;
+
+	uint8_t SIZE = get_SIZE();
+	uint8_t buffer_index = get_buffer_index();
+
+	if(SIZE == buffer_index){
+		break;
+	}
+	Queue_Handler();
+}

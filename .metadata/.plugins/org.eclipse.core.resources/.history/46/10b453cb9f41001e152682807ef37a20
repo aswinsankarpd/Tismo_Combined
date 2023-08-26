@@ -1,0 +1,15 @@
+/*
+ * Rx_ADC.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+#include "Rx_ADC.h"
+uint8_t pData[24];
+
+void Rx_ADC(){
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_7,0);
+	HAL_SPI_Receive(&hspi2,(uint8_t*)pData,(uint16_t)sizeof(pData),HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_7,1);
+	filtering(pData)
+}

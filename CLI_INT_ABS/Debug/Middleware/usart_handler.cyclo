@@ -1,0 +1,2 @@
+../Middleware/usart_handler.c:8:6:Receive_Interrupt	1
+../Middleware/usart_handler.c:12:6:HAL_UART_RxCpltCallback	1

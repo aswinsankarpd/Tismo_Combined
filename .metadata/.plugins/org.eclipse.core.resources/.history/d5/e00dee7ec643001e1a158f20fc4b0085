@@ -1,0 +1,13 @@
+/*
+ * adc_driver.h
+ *
+ *  Created on: Aug 26, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef ADC_ADC_DRIVER_H_
+#define ADC_ADC_DRIVER_H_
+
+
+
+#endif /* ADC_ADC_DRIVER_H_ */

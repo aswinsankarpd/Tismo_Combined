@@ -1,0 +1,12 @@
+/*
+ * uart_handler.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+#include "uart_handler.h"
+
+
+void Rx_UART_Intrpt(char Temp_Rx_String[]){
+	HAL_UART_Receive_IT(&huart1,(uint8_t*)Temp_Rx_String, sizeof(Temp_Rx_String));
+}

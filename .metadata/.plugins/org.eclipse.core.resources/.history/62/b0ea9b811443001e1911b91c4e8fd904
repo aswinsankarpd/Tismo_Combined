@@ -1,0 +1,24 @@
+/*
+ * Command_Parser.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CLI_COMMAND_PARSER_H_
+#define CLI_COMMAND_PARSER_H_
+
+#include "main.h"
+#include "uart_handler.h"
+
+typedef void (*CommandFunction)();
+
+typedef struct {
+    const char *command;
+    const char *sub_command;
+    CommandFunction function;
+} CommandMap;
+
+void command_parser(char *Command_String);
+
+#endif /* CLI_COMMAND_PARSER_H_ */

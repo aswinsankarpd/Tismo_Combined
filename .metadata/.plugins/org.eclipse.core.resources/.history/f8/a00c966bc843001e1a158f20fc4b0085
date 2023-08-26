@@ -1,0 +1,19 @@
+/*
+ * stimer_callback.h
+ *
+ *  Created on: Aug 26, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef S_TIMER_STIMER_CALLBACK_H_
+#define S_TIMER_STIMER_CALLBACK_H_
+
+#include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include "getSECCOUNT.h"
+
+void TimerCallback();
+void SubTimerCallback();
+
+#endif /* S_TIMER_STIMER_CALLBACK_H_ */

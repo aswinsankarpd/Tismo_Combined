@@ -1,0 +1,21 @@
+/*
+ * cbuff_init.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CBUFF_CBUFF_INIT_H_
+#define CBUFF_CBUFF_INIT_H_
+
+#include "main.h"
+
+void Circular_Buffer_Init();
+void CircularBuffer_Destroy(CircularBuffer *cb);
+
+uint8_t* CircularBuffer_GetHead(CircularBuffer *cb);
+uint8_t* get_tail();
+uint8_t get_SIZE();
+
+
+#endif /* CBUFF_CBUFF_INIT_H_ */

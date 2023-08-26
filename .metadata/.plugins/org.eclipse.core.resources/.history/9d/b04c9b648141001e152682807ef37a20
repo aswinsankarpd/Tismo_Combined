@@ -1,0 +1,29 @@
+/*
+ * TimerCallback.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#define PRIM_COUNT 10
+#define SEC_COUNT 1
+static int primary_Count = 0;
+static int secondary_Count = 0;
+
+void TimerCallback(){
+	primary_Count++;
+
+	if (primary_Count == TEN_MS){
+		primary_Count = PRIM_COUNT;
+		SubTimerCallback();
+	}
+
+}
+
+void SubTimerCallback(){
+	secondary_Count++;
+	if (secondary_Count == ){
+		HAL_UART_Transmit(&huart1,&secondary_Count,sizeof(secondary_Count),HAL_MAX_DELAY);
+		secondary_Count = 0;
+	}
+}

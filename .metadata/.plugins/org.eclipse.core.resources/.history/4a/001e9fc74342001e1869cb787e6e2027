@@ -1,0 +1,12 @@
+/*
+ * pwm_start.c
+ *
+ *  Created on: Aug 24, 2023
+ *      Author: Aswin Sankar
+ */
+
+void pwm_start(){
+	  HAL_TIM_PWM_Init(&htim2);
+	  HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_1);
+	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, dutycycle);
+}

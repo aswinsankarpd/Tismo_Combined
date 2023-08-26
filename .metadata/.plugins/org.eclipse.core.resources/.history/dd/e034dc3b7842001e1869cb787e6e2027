@@ -1,0 +1,13 @@
+/*
+ * softtimer.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+#include "softimer.h"
+
+void softtimer(){
+	int softtimer_value;
+	HAL_UART_Transmit_IT(&huart1,(uint8_t*)&softtimer_value,(uint16_t)sizeof(softtimer_value));
+	start_timer();
+}

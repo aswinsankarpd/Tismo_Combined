@@ -1,0 +1,48 @@
+/*
+ * addtoQueue.c
+ *
+ *  Created on: Aug 22, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "Enqueue.h"
+
+static uint8_t buffer_index=0;
+
+
+/*
+ * @breif:
+  	- get the head, it corresponds to the starting adress
+ 	- get the tail, also corresponds to the same.
+ 	- add buffer index to the tail. initially buffer index is zero.
+	- if buffer index is not zero, for example one... then
+	  tail becomes incremented by one adress level.
+	- This happens until the queue is full.
+	- If queue is full rewriting occurs.
+ *
+ * @params: pointer to the data entered from CLI
+ * */
+
+void Enqueue(uint8_t *pData){
+	uint8_t SIZE = get_SIZE();
+	uint8_t *head = get_head();
+	uint8_t *tail = get_tail();
+
+	tail = tail + buffer_index;
+
+	if (SIZE == buffer_index){
+		tail = head;
+		*tail = *pData;
+		buffer_index=1;
+
+		/*IMPLEMENT DEQUEUE FUNCTIONALITY USING STATEMACHINE*/
+	}
+	else{
+		*tail = *pData;
+		buffer_index++;
+	}
+
+	HAL_UART_Transmit(&huart1, (uint8_t*)&tail, (uint16_t)sizeof(tail),HAL_MAX_DELAY);
+	Queue_Handler();
+}

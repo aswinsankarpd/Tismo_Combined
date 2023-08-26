@@ -1,0 +1,14 @@
+/*
+ * Dequeue.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "Dequeue.h"
+
+void Dequeue(){
+	uint8_t *head = get_head();
+	uint8_t *tail = get_tail();
+}

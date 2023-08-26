@@ -1,0 +1,17 @@
+11:30:40 **** Incremental Build of configuration Debug for project PWM_UPD ****
+make -j4 all 
+arm-none-eabi-gcc "../Application/statemachine_pwm.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Tutorial/pwmm/Middleware" -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Tutorial/pwmm/Application" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/statemachine_pwm.d" -MT"Application/statemachine_pwm.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/statemachine_pwm.o"
+arm-none-eabi-gcc -o "PWM_UPD.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Aswin Sankar\STM32CubeIDE\workspace_1.13.1\Tutorial\pwmm\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_UPD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_UPD.elf
+ 
+arm-none-eabi-size   PWM_UPD.elf 
+arm-none-eabi-objdump -h -S  PWM_UPD.elf  > "PWM_UPD.list"
+   text	   data	    bss	    dec	    hex	filename
+  13772	     24	   1856	  15652	   3d24	PWM_UPD.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_UPD.list
+ 
+
+11:30:41 Build Finished. 0 errors, 0 warnings. (took 921ms)
+

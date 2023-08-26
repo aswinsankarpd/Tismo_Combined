@@ -1,0 +1,24 @@
+/*
+ * Command_Parser.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CLI_COMMAND_PARSER_H_
+#define CLI_COMMAND_PARSER_H_
+
+#include "main.h"
+#include "uart_handler.h"
+#include "led_control.h"
+
+struct table{
+	char *name;
+	void (*ptr)(uint8_t,char **);
+	struct table* subCommmand;
+
+};
+
+void command_parser(char *Command_String);
+int get_cbuff_flag();
+#endif /* CLI_COMMAND_PARSER_H_ */

@@ -1,0 +1,24 @@
+/*
+ * Command_Parser.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "Command_Parser.h"
+
+void LED_ON(int value);
+void LED_OFF(int value);
+void PWM_DC(int value);
+
+typedef struct {
+    const char *command;
+    const char *sub_command;
+    void (*function)(int);
+} CommandMap;
+
+CommandMap commandTable[] = {
+    { "LED","ON",LED_ON },
+    { "LED","OFF",LED_OFF },
+    { "PWM","DC",PWM_DC }
+};

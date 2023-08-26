@@ -1,0 +1,15 @@
+/*
+ * cbuff_queue_handler.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef CBUFF_CBUFF_QUEUE_HANDLER_H_
+#define CBUFF_CBUFF_QUEUE_HANDLER_H_
+
+#include "main.h"
+#include "uart_handler.h"
+
+void cbuff_queue_handler();
+#endif /* CBUFF_CBUFF_QUEUE_HANDLER_H_ */

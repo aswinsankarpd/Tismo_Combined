@@ -1,0 +1,15 @@
+/*
+ * filtering.h
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef FILTERING_H_
+#define FILTERING_H_
+
+#include "main.h"
+#include <string.h>
+void filtering();
+
+#endif /* FILTERING_H_ */

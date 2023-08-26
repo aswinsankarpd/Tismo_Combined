@@ -1,0 +1,13 @@
+/*
+ * Rx_ADC.h
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef RX_ADC_H_
+#define RX_ADC_H_
+
+void Rx_ADC();
+
+#endif /* RX_ADC_H_ */

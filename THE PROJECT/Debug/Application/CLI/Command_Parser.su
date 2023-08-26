@@ -1,0 +1,2 @@
+../Application/CLI/Command_Parser.c:31:6:command_parser	32	static
+../Application/CLI/Command_Parser.c:59:5:get_cbuff_flag	4	static

@@ -1,0 +1,82 @@
+/*
+ * Command_Parser.c
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "Command_Parser.h"
+
+
+char welcome[]="\n\tWELCOME TO CLI INTERFACE\t\n\n\n\t 1)LED_ON_NUMBER : TURNS LED <NUMBER> ON\t\n\t 2)LED_OFF_NUMBER : TURNS LED <NUMBER> OFF\t\n\t 3)READ_ADC : READS CURRENT ADC VALUE\t\n\t 4)READ_BUTTON : READS BUTTON STATUS\t\n\t 5)PWM_DC_VALUE : SET PWM DUTY CYCLE TO <VALUE>\t\n\t 6)PWM_FREQ_VALUE : SET PWM FREQ TO <VALUE>\t\n";
+char error[]="INVALID COMMAND . TYPE \"HELP\" FOR AVAILABLE COMMANDS";
+char completedMsg[]="task is completed\n";
+
+
+
+struct table PWMcommandLUT[2]={
+		{"DC",&updatePwm,NULL},
+		{"FREQ",&updateFreq,NULL}
+};
+
+struct table LEDcommandLUT[2]={
+		{"ON",&led_on,NULL},
+		{"OFF",&led_off,NULL}
+};
+
+struct table commandLUT[3]={
+		{"PWM",NULL,PWMcommandLUT},
+		{"LED",NULL,LEDcommandLUT},
+		{"READ",NULL,READcommandLUT}
+};
+
+
+
+void command_parser(char *Command_String){
+
+	uint8_t loopIndex = 0;
+	char *tokens[10] = {};
+
+	if(strcmp(Command_String,"HELP")==0){
+		//print help
+	}
+
+	else{
+		tokens[loopIndex] = strtok(Command_String, "_");
+
+	for (loopIndex = 0; tokens[loopIndex] != NULL; loopIndex++)
+	{
+		argString[loopIndex + 1] = strtok(NULL, "_");
+	}
+
+  	 executeCommand((loopIndex + 1), argString);
+	}
+}
+
+
+void executeCommand(uint8_t argCount, char *arguMents[])
+{
+
+	for(uint8_t cnt = 0; cnt < (sizeof(commandLUT)/sizeof(commandLUT[0])); cnt++)
+	{
+		if(strcmp(arguMents[0], commandLUT[cnt].name) == 0)
+		{
+			if(commandLUT[cnt].subCommmand != NULL)
+			{
+				for(uint8_t subcnt = 0; subcnt < 2; subcnt++)
+				{
+						if(strcmp(arguMents[1], (commandLUT[cnt].subCommmand)[subcnt].name) == 0)
+						{
+							(commandLUT[cnt].subCommmand)[subcnt].ptr(argCount - 2, arguMents);
+							cmdMatch=1;
+						}
+				}
+			}
+			else
+			{
+				commandLUT[cnt].ptr(argCount - 2, arguMents);
+				 cmdMatch=1;
+			}
+	  	}
+	}
+}

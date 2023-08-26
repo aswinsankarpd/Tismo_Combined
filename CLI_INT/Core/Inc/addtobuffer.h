@@ -1,0 +1,1 @@
+void addtobuffer(char *str);

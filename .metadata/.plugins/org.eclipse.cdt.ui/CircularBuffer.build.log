@@ -1,0 +1,10 @@
+09:53:18 **** Build of configuration Debug for project CircularBuffer ****
+make -j4 all 
+arm-none-eabi-size   CircularBuffer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11800	     24	   1728	  13552	   34f0	CircularBuffer.elf
+Finished building: default.size.stdout
+ 
+
+09:53:19 Build Finished. 0 errors, 0 warnings. (took 325ms)
+

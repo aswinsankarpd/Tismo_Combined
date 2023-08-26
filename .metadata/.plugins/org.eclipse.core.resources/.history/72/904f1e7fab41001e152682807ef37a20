@@ -1,0 +1,21 @@
+/*
+ * adc_driver.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "adc_driver.h"
+
+void adc_init(){
+
+	HAL_ADC_MspInit(&hadc1);
+	HAL_ADC_Start_IT(&hadc1);
+
+
+}
+
+void HAL_ADC_ConvCpltCallback(hadc1){
+	adc_val = HAL_ADC_GetValue(&hadc1);
+	HAL_ADC_Start_IT (&hadc1);
+}

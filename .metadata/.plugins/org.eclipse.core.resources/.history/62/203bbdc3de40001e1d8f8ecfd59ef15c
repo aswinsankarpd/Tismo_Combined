@@ -1,0 +1,13 @@
+/*
+ * Queue_Handler.c
+ *
+ *  Created on: Aug 22, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "Queue_Handler.h"
+
+void Queue_Handler(){
+	HAL_UART_Receive_IT();
+}

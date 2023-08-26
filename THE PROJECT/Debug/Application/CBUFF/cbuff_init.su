@@ -1,0 +1,4 @@
+../Application/CBUFF/cbuff_init.c:11:6:Circular_Buffer_Init	16	static
+../Application/CBUFF/cbuff_init.c:18:10:CircularBuffer_GetHead	16	static
+../Application/CBUFF/cbuff_init.c:22:10:CircularBuffer_GetTail	16	static
+../Application/CBUFF/cbuff_init.c:26:9:CircularBuffer_GetSize	16	static

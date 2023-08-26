@@ -1,0 +1,23 @@
+/*
+ * uart_handler.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef UART_UART_HANDLER_H_
+#define UART_UART_HANDLER_H_
+
+
+#include "main.h"
+#include "usart.h"
+#include "addtobuffer.h"
+#include "command_parser.h"
+#include "cbuff_Enqueue.h"
+
+#define MESSAGE_SIZE 100
+
+void Rx_UART_Intrpt();
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart1);
+void Tx_UART(char message[100]);
+#endif /* UART_UART_HANDLER_H_ */

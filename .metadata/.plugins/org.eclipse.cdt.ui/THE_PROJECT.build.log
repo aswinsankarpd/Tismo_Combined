@@ -1,0 +1,22 @@
+15:06:21 **** Incremental Build of configuration Debug for project THE_PROJECT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/THE_PROJECT/Application" -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/THE_PROJECT/Middleware" -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/THE_PROJECT/Application/cli" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Application/cli/check_command.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/THE_PROJECT/Application/cli" -I"C:/Users/Aswin Sankar/STM32CubeIDE/workspace_1.13.1/Abstracted/THE_PROJECT/Middleware/cli" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Application/cli/check_command.d" -MT"Application/cli/check_command.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/cli/check_command.o"
+../Core/Src/main.c:26:10: fatal error: usart_handler.h: No such file or directory
+   26 | #include "usart_handler.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Application/cli/check_command.c:14:21: error: 'LED1_ON' undeclared here (not in a function)
+   14 |     {"LED1", "ON", &LED1_ON},
+      |                     ^~~~~~~
+../Application/cli/check_command.c:15:26: error: 'LED1_OFF' undeclared here (not in a function); did you mean 'LED1_ON'?
+   15 |         {"LED1", "OFF", &LED1_OFF}
+      |                          ^~~~~~~~
+      |                          LED1_ON
+make: *** [Application/cli/subdir.mk:19: Application/cli/check_command.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+15:06:22 Build Failed. 6 errors, 0 warnings. (took 512ms)
+

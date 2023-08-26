@@ -1,0 +1,16 @@
+/*
+ * softimer.h
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef SOFTIMER_H_
+#define SOFTIMER_H_
+
+
+#include "main.h"
+
+void softtimer();
+
+#endif /* SOFTIMER_H_ */

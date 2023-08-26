@@ -1,0 +1,2 @@
+../Application/CLI/led_control.c:10:6:LED_ON	2
+../Application/CLI/led_control.c:16:6:LED_OFF	2

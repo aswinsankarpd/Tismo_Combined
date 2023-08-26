@@ -1,0 +1,24 @@
+/*
+ * Queue_Handler.c
+ *
+ *  Created on: Aug 22, 2023
+ *      Author: Aswin Sankar
+ */
+
+
+#include "Queue_Handler.h"
+
+static char pData[1];
+
+void Queue_Handler(){
+	HAL_UART_Receive_IT(&huart1, (uint8_t*)&pData, (uint16_t)sizeof(pData));
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if (pData[0] == '\r'){
+		Dequeue();
+	}
+	else{
+	Enqueue(&pData[0]);
+	}
+}

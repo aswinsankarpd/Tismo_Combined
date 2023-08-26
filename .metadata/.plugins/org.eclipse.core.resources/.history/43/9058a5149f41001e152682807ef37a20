@@ -1,0 +1,16 @@
+/*
+* filtering.c
+*
+*  Created on: Aug 23, 2023
+*      Author: Aswin Sankar
+*/
+#include "filtering.h"
+static uint16_t uDataresult;
+static uint8_t uAdcData[8];
+
+void filtering(){
+	uAdcData[1] = (pData[0] << 6) | ( pData[1] >> 2);
+	uAdcData[0] = (pData[2] >> 2) | ( pData[1] << 6);
+	memcpy(&uDataresult,&uAdcData[0],sizeof(uint16_t));
+	HAL_UART_Transmit(&huart2,(uint8_t*)&uDataresult,(uint16_t)sizeof(uDataresult),100);
+}

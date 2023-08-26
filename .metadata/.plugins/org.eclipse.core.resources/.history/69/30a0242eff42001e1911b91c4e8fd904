@@ -1,0 +1,16 @@
+/*
+ * application_cli_includes.h
+ *
+ *  Created on: Aug 25, 2023
+ *      Author: Aswin Sankar
+ */
+
+#ifndef APPLICATION_CLI_INCLUDES_H_
+#define APPLICATION_CLI_INCLUDES_H_
+
+#include "main.h"
+#include "addtobuffer.h"
+#include "Command_Parser.h"
+#include "CommandLineInterface.h"
+
+#endif /* APPLICATION_CLI_INCLUDES_H_ */

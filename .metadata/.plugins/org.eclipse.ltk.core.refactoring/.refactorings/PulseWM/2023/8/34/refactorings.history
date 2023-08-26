@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;THE_PWM/Middleware/dutycycle.h&apos; to &apos;get_dutycycle.h&apos;" description="Rename resource &apos;dutycycle.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Middleware/dutycycle.h" name="get_dutycycle.h" stamp="1692771522971" updateReferences="true"/>
+</session>

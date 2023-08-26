@@ -1,0 +1,19 @@
+/*
+ * fetch_duty.c
+ *
+ *  Created on: Aug 24, 2023
+ *      Author: Aswin Sankar
+ */
+#include "fetch_duty.h"
+
+static int duty=80;
+
+void fetch_duty(){
+
+	HAL_UART_Receive_IT(&huart1,(uint8_t*)&duty, (uint16_t)sizeof(int));
+	pwm_start();
+}
+
+int getduty(){
+	return duty;
+}

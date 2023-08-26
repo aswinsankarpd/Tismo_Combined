@@ -1,0 +1,3 @@
+../Middleware/UART/uart_handler.c:11:6:Rx_UART_Intrpt	8	static
+../Middleware/UART/uart_handler.c:15:6:HAL_UART_RxCpltCallback	24	static
+../Middleware/UART/uart_handler.c:28:6:Tx_UART	16	static

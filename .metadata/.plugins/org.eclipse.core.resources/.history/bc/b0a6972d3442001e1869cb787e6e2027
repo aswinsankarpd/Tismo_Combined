@@ -1,0 +1,15 @@
+/*
+ * calculation.c
+ *
+ *  Created on: Aug 23, 2023
+ *      Author: Aswin Sankar
+ */
+
+#include "calculation.h"
+static uint32_t adc_val;
+
+void calculation(){
+	adc_val = get_adc_val();
+	int resistance = (adc_val*10000)/(5-adc_val);
+	HAL_UART_Transmit(&huart1, (uint8_t*)&resistance, sizeof(resistance));
+}
