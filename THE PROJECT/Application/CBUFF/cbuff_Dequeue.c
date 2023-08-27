@@ -5,10 +5,15 @@
  *      Author: Aswin Sankar
  */
 
-
 #include "cbuff_Dequeue.h"
 
 static int buffer_size_index = 0;
+
+/*
+* @brief: Dequeues the element whenver 'd' is pressed in the command line.
+* @params: a.cb : address of the intialised circular buffer.
+* @author: Aswin Sankar
+*/
 
 void cbuff_Dequeue(CircularBuffer* cb){
 

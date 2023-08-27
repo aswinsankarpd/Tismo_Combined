@@ -7,6 +7,11 @@
 
 #include "CommandLineInterface.h"
 
+/*
+*	@brief: This function is the Entry point for CLI.
+*	@params: No parameters involved
+*	@author: Aswin Sankar
+*/
 void CommandLineInterface(){
 	Rx_UART_Intrpt();
 }

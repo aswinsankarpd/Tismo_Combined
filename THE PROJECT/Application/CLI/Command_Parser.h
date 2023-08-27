@@ -13,6 +13,7 @@
 #include "led_control.h"
 #include "adc_main.h"
 #include "stimer_main.h"
+#define MESSAGE_SIZE 100
 
 struct table{
 	char *name;

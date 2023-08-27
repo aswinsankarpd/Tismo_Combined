@@ -1,9 +1,3 @@
-/*
- * Command_Parser.c
- *
- *  Created on: Aug 25, 2023
- *      Author: Aswin Sankar
- */
 
 #include "Command_Parser.h"
 
@@ -22,11 +16,20 @@ CommandMap commandTable[] = {
 	{ "SET","STIM",softtimer}
 };
 
-char message[100];
+char message[MESSAGE_SIZE];
 char *command;
 char *sub_command;
 char *value;
 static int cbuff_flag = 0;
+
+/*
+ * 
+ * @brief : Takes the cli command as input. Tokenises it and divies into command, subcommand and function argument.
+ *          The function argument is passes when the function in the lookup table is called.    
+ * @params : a. Command_String: The cli command which is passed from buff_copy_callback.
+ * @author: Aswin Sankar
+ *  
+ */
 
 void command_parser(char *Command_String){
     command = strtok(Command_String, "_");
@@ -55,6 +58,15 @@ void command_parser(char *Command_String){
            }
        }
 }
+
+/*
+ * 
+ * @brief : CBUFF requires another buffer to be entered into but uses the same callback as cli. So cbuff_flag helps the control to decide
+ *          whihc buffer the data should go to.   
+ * @params : No Params involved.
+ * @author: Aswin Sankar
+ *  
+ */
 
 int get_cbuff_flag(){
 	return cbuff_flag;

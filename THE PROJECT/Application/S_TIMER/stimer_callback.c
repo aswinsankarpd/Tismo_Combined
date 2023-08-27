@@ -12,6 +12,13 @@
 static int primary_Count = 0;
 static int secondary_Count = 0;
 
+/*
+* @brief: The Timer Callback function calls secondary callback when PRIM_COUNT is elapsed.
+* @params: a.SEC_COUNT: Duration of secondary timer.
+* @author: Aswin Sankar
+*
+*/
+
 void TimerCallback(int SEC_COUNT){
 	primary_Count++;
 
@@ -21,6 +28,14 @@ void TimerCallback(int SEC_COUNT){
 	}
 
 }
+
+
+/*
+* @brief: Counts until seconday timer duration is elapsed and then toggles the led along with sending message to CLI.
+* @params: a.SEC_COUNT: Duration of secondary timer.
+* @author: Aswin Sankar
+*
+*/
 
 void SubTimerCallback(int SEC_COUNT){
 	secondary_Count++;

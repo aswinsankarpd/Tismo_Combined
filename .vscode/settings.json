@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "circular_buffer_init.h": "c",
-        "enqueue.h": "c"
+        "enqueue.h": "c",
+        "command_parser.h": "c",
+        "cbuff_enqueue.h": "c",
+        "cbuff_init.h": "c",
+        "uart_handler.h": "c",
+        "stimer_main.h": "c"
     }
 }

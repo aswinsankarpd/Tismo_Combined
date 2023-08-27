@@ -11,6 +11,5 @@
 #include "main.h"
 #include "timer_inits.h"
 void softtimer(int param);
-int get_timer_count();
 
 #endif /* S_TIMER_STIMER_MAIN_H_ */

@@ -8,6 +8,12 @@
 
 char Temp_Rx_String[1];
 
+/*
+* @brief: Triggers and Recevies Reception Interrupt whenever data is received from cli.
+* @params: No params involved.
+* @author: Aswin Sankar
+*/
+
 void Rx_UART_Intrpt(){
 	HAL_UART_Receive_IT(&huart1,(uint8_t*)Temp_Rx_String, sizeof(Temp_Rx_String));
 }
@@ -25,6 +31,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart1){
 	}
 }
 
+/*
+* @brief: Triggers Transmission Interrupt whenever data is transmitted to cli.
+* @params: No params involved.
+* @author: Aswin Sankar
+*/
 void Tx_UART(char message[MESSAGE_SIZE]){
 	HAL_UART_Transmit(&huart1,(uint8_t*)&message[0],(uint16_t)strlen(message),100);
 }

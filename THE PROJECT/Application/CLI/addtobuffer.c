@@ -1,8 +1,11 @@
 /*
  * addtobuffer.c
  *
- *  Created on: Aug 25, 2023
- *      Author: Aswin Sankar
+ *  @brief : Function to add elements into the buffer. Happens until enter key is pressed. Elemnts added intpo Rx_Buffer_1.
+ * 			 The Rx_Over_Flag becomes high when reception is complete. 
+ * @params : a. Rx_Temp_String: Char element entered in command line.
+ *  @author: Aswin Sankar
+ *  
  */
 #include "addtobuffer.h"
 
@@ -26,6 +29,15 @@ void addtobuffer(char *Rx_Temp_String){
 
 }
 
+/*
+ *
+ *
+ *  @brief : After buffer insertion, this function copies elements of buffer 1 to buffer 2 and command parsing takes place here
+ *  @params : No parameters involved
+ *  @author: Aswin Sankar
+ *  
+ */
+
 void buff_copy_callback(){
 	Rx_Over_Flag = 0 ;
 
@@ -39,6 +51,14 @@ void buff_copy_callback(){
 
 	CommandLineInterface();
 }
+
+/*
+ * 
+ *  @brief : Function to return the Rx_Over_Flag. 
+ * @params : No params involved
+ *  @author: Aswin Sankar
+ *  
+ */
 
 int get_Rx_Over_Flag(){
 	return Rx_Over_Flag;
