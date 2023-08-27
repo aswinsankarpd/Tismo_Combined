@@ -45,7 +45,7 @@ extern TIM_HandleTypeDef htim11;
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+#define MESSAGE_SZIE 100
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

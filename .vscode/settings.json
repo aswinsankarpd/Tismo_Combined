@@ -6,6 +6,8 @@
         "cbuff_enqueue.h": "c",
         "cbuff_init.h": "c",
         "uart_handler.h": "c",
-        "stimer_main.h": "c"
+        "stimer_main.h": "c",
+        "adc_calculation.h": "c",
+        "main.h": "c"
     }
 }
